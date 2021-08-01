@@ -1,0 +1,266 @@
+/* GENERAL INFO STYLES */
+
+body {
+    color: #184A45ff;
+    font-size: 100%;
+    box-sizing: border-box;
+    width: 100%;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fc766aff;
+    color: #184A45ff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-sctn {
+    display: flex;
+    flex-direction: row;
+}
+
+#about {
+    border-bottom: 0.0625em solid dimgray;
+    background-color: #fc766aff;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    height: 50vh;
+}
+
+#about>div:nth-child(1) {
+    height: 100%;
+    width: 100%;
+    background-size: auto;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+#about h1 {
+    width: 50%;
+    line-height: 1.5;
+    font-size: 1.5em;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: #184A45ff;
+    text-transform: uppercase;
+}
+
+#about p {
+    width: 50%;
+    line-height: 1.5;
+    font-size: 1em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: #184A45ff;
+}
+
+
+/* FORM STYLES */
+
+li input {
+    width: 3.5em;
+}
+
+#calculator {
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+form {
+    display: flex;
+}
+
+fieldset {
+    height: auto;
+    margin: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 0.75em;
+    width: 33.3%;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+li {
+    margin: 0.5em;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+form input {
+    display: block;
+    border: inset 0.2em;
+    border-radius: 0.5em;
+}
+
+.error {
+    display: block;
+    border: 0.2em solid red;
+}
+
+.btn-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#time-calc-btn,
+#dist-calc-btn,
+#pace-calc-btn {
+    cursor: pointer;
+    border: 1px solid #fc766aff;
+    ;
+    border-radius: 1em;
+    background-color: #fc766aff;
+    color: white;
+    padding: 0.5em;
+    margin: 1em;
+    width: 100%;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: all 0.4s;
+}
+
+#time-calc-btn:hover,
+#dist-calc-btn:hover,
+#pace-calc-btn:hover {
+    color: #fc766aff;
+    ;
+    background-color: #184A45ff;
+}
+
+#time-calc-btn:active,
+#dist-calc-btn:active,
+#pace-calc-btn:active {
+    color: #fc766aff;
+    ;
+    background-color: #184A45ff;
+}
+
+.alert-box-bg {
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 5s;
+}
+
+.alert-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: black;
+    border: 1px solid #58bb43;
+    max-width: 80vw;
+    height: 20vh;
+    border-radius: 0.25em;
+    position: absolute;
+}
+
+.error-box {
+    border: 1px solid red;
+}
+
+.results {
+    margin: 1em 2em;
+    text-align: center;
+}
+
+.confirm-btn {
+    background-color: #58bb43;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    padding: 0.5em;
+}
+
+.error-btn {
+    background-color: red;
+}
+
+
+/* MOBILE STYLES */
+
+@media only screen and (max-width: 480px) {
+    .wrapper {
+        height: auto;
+    }
+    #about {
+        height: 65vh;
+    }
+    #about>div:nth-child(1) {
+        background-position: center;
+    }
+    #about h1 {
+        width: 80%;
+    }
+    #about p {
+        width: 80%;
+        font-size: 1em;
+        font-weight: normal;
+        margin: auto;
+        bottom: 0.5em;
+    }
+    form {
+        margin: auto;
+    }
+    fieldset {
+        width: 80%;
+    }
+    .input-sctn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .btn-wrapper {
+        flex-direction: column;
+    }
+}

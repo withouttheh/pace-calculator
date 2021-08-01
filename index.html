@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calculator</title>
+    <link rel="stylesheet" href="css/main.css"></link>
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper" id="about">
+            <h1>Fitness Calculator</h1>
+            <p>This is a fitness calulator that calculates your average pace based on your finishing time and distance covered. It also provides you with options to calculate your distance covered at a given pace and time or the time it takes to cover a
+                certain distance at a certain pace.</p>
+        </div>
+        <div class="wrapper" id="calculator">
+            <form id="calc-form" action="#">
+                <div class=" input-sctn">
+                    <fieldset>
+                        <legend>Enter your time:</legend>
+                        <ul>
+                            <li><label for="hrs-input">hh: </label><input type="number" name="hours" min="0" max="23" id="hrs-input" class="time-input" required/></li>
+                            <li><label for="mins-input">mm: </label><input type="number" name="minutes" min="0" max="59" id="mins-input" class="time-input" required/></li>
+                            <li><label for="secs-input">ss: </label><input type="number" name="seconds" min="0" max="59" id="secs-input" class="time-input" required/></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Enter your distance:</legend>
+                        <ul>
+                            <li><label for="km-input">km: </label><input type="number" name="kilometers" min="0" maxlength="3" step="any" id="km-input" class="dist-input" required/></li>
+                            <li><label for="m-input">m: </label><input type="number" name="meters" min="0" maxlength="3" id="m-input" class="dist-input" required/></li>
+                        </ul>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Enter your pace:</legend>
+                        <ul>
+                            <li><label for="pace-mins-input">mm: </label><input type="number" name="minutes" min="0" max="59" id="pace-mins-input" class="pace-input" required/></li>
+                            <li><label for="pace-secs-input">ss: </label><input type="number" name="seconds" min="0" max="59" id="pace-secs-input" class="pace-input" required/></li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="btn-wrapper">
+                    <button id="time-calc-btn" type="submit" value="Calculate">Calculate Time</button>
+
+                    <button id="dist-calc-btn" type="submit" value="Calculate">Calculate Distance</button>
+
+                    <button id="pace-calc-btn" type="submit" value="Calculate">Calculate Pace</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
